@@ -9,7 +9,7 @@ Format: date · what changed · files/areas touched.
 - **Frontend → Vercel** (team class-thetapacadems-projects, project `namma-mobiles`): `vercel.json` proxies `/api/*` to Railway and falls back to `index.html` for client routes. Env: `VITE_CLERK_PUBLISHABLE_KEY`.
 - **Code changes:** Java target 25 → **21** (Railway's JDK; 31/31 tests pass); `server.port: ${PORT:8080}`; `railway.json`, `.railwayignore`.
 - **Bug fixed:** the ignore rule `config/` (for the local secrets folder) also hid the Java package `com.mobinest.config` (`AppProperties`, `SecurityConfig`, `OpenApiConfig`), so it was missing from GitHub and a clone could not compile. Rule anchored to `/config/`; files added (repo commit `74d4aea`). `mvnw` marked executable in git.
-- **GitHub:** first push done (commit `8712080`). Commits `54976e7`, `74d4aea` and the deployment commit are local and still need a push.
+- **GitHub:** all pushed to https://github.com/classtapacademy/NAMMA-MOBILES (`2af5382`). The GitHub login is saved in Windows Credential Manager, so later pushes need no device code.
 
 ## 2026-11-12 (≈16:20): admin back office (Clerk + ADMIN role)
 - **Access control:** `ClerkRoleJwtConverter` grants `ROLE_ADMIN` from `customer.role` (looked up by the JWT `sub`, cached 30 s, fail-closed; token role claims ignored). Bootstrap admins via `ADMIN_CLERK_USER_IDS` (`mobinest.admin.clerk-user-ids`, empty by default). `/api/admin/**`: 401 without/invalid token, 403 for non-admins.
