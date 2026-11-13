@@ -6,16 +6,18 @@
 
 **Every phone. Every brand. One destination.**
 
-A full-stack e-commerce platform for India that sells **only mobile phones**: brand-new, certified refurbished, pre-owned and eco-recycled, plus matching accessories. Built with **React 19** on the front, **Spring Boot 4 + Java 25** on the back, **MySQL** for data and **Clerk** for sign-in.
+A full-stack e-commerce platform for India that sells **only mobile phones**: brand-new, certified refurbished, pre-owned and eco-recycled, plus matching accessories. Built with **React 19** on the front, **Spring Boot 4 + Java 21** on the back, **MySQL** for data and **Clerk** for sign-in.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.1-6DB33F?logo=springboot&logoColor=white)
-![Java](https://img.shields.io/badge/Java-25-ED8B00?logo=openjdk&logoColor=white)
+![Java](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)
 ![Flyway](https://img.shields.io/badge/Flyway-migrations-CC0200?logo=flyway&logoColor=white)
 ![Clerk](https://img.shields.io/badge/Auth-Clerk-6C47FF?logo=clerk&logoColor=white)
+
+**Live demo:** [namma-mobiles.vercel.app](https://namma-mobiles.vercel.app) · API on Railway ([Swagger](https://mobinest-api-production.up.railway.app/swagger-ui.html)) · [How it's deployed](mobinest-api/context/DEPLOYMENT.md)
 
 <img src="docs/screenshots/home-light.png" alt="Namma Mobiles home page" width="900" />
 
@@ -60,7 +62,9 @@ A full-stack e-commerce platform for India that sells **only mobile phones**: br
 
 | Light | Dark |
 |---|---|
-| <img src="docs/screenshots/home-light.png" alt="Home, light" /> | <img src="docs/screenshots/home-dark.png" alt="Home, dark" /> |
+| **Live demo:** [namma-mobiles.vercel.app](https://namma-mobiles.vercel.app) · API on Railway ([Swagger](https://mobinest-api-production.up.railway.app/swagger-ui.html)) · [How it's deployed](mobinest-api/context/DEPLOYMENT.md)
+
+<img src="docs/screenshots/home-light.png" alt="Home, light" /> | <img src="docs/screenshots/home-dark.png" alt="Home, dark" /> |
 | <img src="docs/screenshots/product.png" alt="Product page" /> | <img src="docs/screenshots/search.png" alt="Search with suggestions" /> |
 
 ---
@@ -72,7 +76,7 @@ A full-stack e-commerce platform for India that sells **only mobile phones**: br
 | **Frontend** | React 19 · Vite 8 · React Router 7 · JavaScript (JSX) |
 | **Styling & UI** | Hand-written CSS with design tokens · Tailwind CSS v4 (utilities, no preflight) · shadcn/ui · **Aceternity UI** (Spotlight, Vanish search, Card Hover Effect) · **Magic UI** (animated theme toggler) · `motion` · Plus Jakarta Sans |
 | **Auth** | Clerk (`@clerk/react`, `@clerk/themes`): hosted sign-in; the API verifies Clerk JWTs |
-| **Backend** | Spring Boot 4.1 · Java 25 · Spring Security 7 (OAuth2 Resource Server) · Spring Data JPA / Hibernate 7 · Bean Validation · springdoc-openapi (Swagger UI) |
+| **Backend** | Spring Boot 4.1 · Java 21 · Spring Security 7 (OAuth2 Resource Server) · Spring Data JPA / Hibernate 7 · Bean Validation · springdoc-openapi (Swagger UI) |
 | **Database** | MySQL 8 · Flyway migrations (V1–V7) |
 | **Tooling** | Maven wrapper · npm · ESLint · JUnit 5 · Playwright end-to-end test |
 
@@ -103,7 +107,7 @@ flowchart LR
 ## 🗂️ Repository structure
 
 ```
-NAMMA-MOBILES/
+namma-mobiles-fullstack/
 ├── mobinest/                  # 🎨 Frontend: React + Vite storefront and admin UI
 │   ├── src/
 │   │   ├── pages/             #   Home, Shop, ProductDetail, Cart, Checkout, Compare, Sell, Account, admin/…
@@ -134,7 +138,7 @@ NAMMA-MOBILES/
 ### 1. Prerequisites
 | Tool | Version | Windows install |
 |---|---|---|
-| JDK | 25 | `winget install --id EclipseAdoptium.Temurin.25.JDK -e` |
+| JDK | 21 or newer | `winget install --id EclipseAdoptium.Temurin.21.JDK -e` |
 | MySQL | 8.x | `winget install --id Oracle.MySQL -e` (set a root password) |
 | Node.js | 22.15+ | `winget install OpenJS.NodeJS.LTS` |
 
@@ -142,8 +146,8 @@ No Maven or Tomcat install needed (Maven wrapper + embedded Tomcat).
 
 ### 2. Clone
 ```bash
-git clone https://github.com/classtapacademy/NAMMA-MOBILES.git
-cd NAMMA-MOBILES
+git clone https://github.com/classtapacademy/namma-mobiles-fullstack.git
+cd namma-mobiles-fullstack
 ```
 
 ### 3. Your own Clerk app (free)
