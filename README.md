@@ -62,9 +62,7 @@ A full-stack e-commerce platform for India that sells **only mobile phones**: br
 
 | Light | Dark |
 |---|---|
-| **Live demo:** [namma-mobiles.vercel.app](https://namma-mobiles.vercel.app) · API on Railway ([Swagger](https://mobinest-api-production.up.railway.app/swagger-ui.html)) · [How it's deployed](mobinest-api/context/DEPLOYMENT.md)
-
-<img src="docs/screenshots/home-light.png" alt="Home, light" /> | <img src="docs/screenshots/home-dark.png" alt="Home, dark" /> |
+| <img src="docs/screenshots/home-light.png" alt="Home, light" /> | <img src="docs/screenshots/home-dark.png" alt="Home, dark" /> |
 | <img src="docs/screenshots/product.png" alt="Product page" /> | <img src="docs/screenshots/search.png" alt="Search with suggestions" /> |
 
 ---
